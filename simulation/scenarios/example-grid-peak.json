@@ -1,0 +1,31 @@
+{
+  "origin_junction_id": "J1",
+  "destination_junction_id": "J3",
+  "mode": "normal",
+  "segment_inputs": [
+    {
+      "segment_id": "SEG-14",
+      "demand_veh_per_hour": 500,
+      "capacity_veh_per_hour": 1800,
+      "note": "Assumed off-peak demand on the western arterial, and a two-lane signalised discharge. Not surveyed: stated for this scenario only."
+    },
+    {
+      "segment_id": "SEG-43",
+      "demand_veh_per_hour": 1600,
+      "capacity_veh_per_hour": 900,
+      "note": "Assumed peak demand into the southern approach against a single-lane closure. Not surveyed: stated for this scenario only."
+    },
+    {
+      "segment_id": "SEG-12",
+      "demand_veh_per_hour": 600,
+      "capacity_veh_per_hour": 1800,
+      "note": "Assumed off-peak demand on the northern arterial. Not surveyed: stated for this scenario only."
+    },
+    {
+      "segment_id": "SEG-23",
+      "demand_veh_per_hour": 600,
+      "capacity_veh_per_hour": 1800,
+      "note": "Assumed off-peak demand on the eastern arterial. Not surveyed: stated for this scenario only."
+    }
+  ]
+}

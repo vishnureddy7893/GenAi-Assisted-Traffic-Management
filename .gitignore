@@ -1,0 +1,108 @@
+# ---------------------------------------------------------------------------
+# Secrets — never commit real credentials. Only .env.example is tracked.
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# ---------------------------------------------------------------------------
+# Datasets — raw traffic corpora are expected to reach 5+ GB.
+# Only manifests (checksums + provenance descriptors) are tracked; never bytes.
+# ---------------------------------------------------------------------------
+datasets/raw/
+datasets/interim/
+datasets/processed/
+datasets/media/
+# Runtime-written site registry: keyed by transient media ids, so committing it
+# would pin coordinates to footage that does not exist in another checkout.
+# A survey worth keeping is committed deliberately, with provenance notes.
+datasets/sites/observation-sites.json
+datasets/sites/confirmed-bindings.json
+!datasets/manifests/
+!datasets/**/README.md
+!datasets/**/.gitkeep
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.parquet
+*.h5
+*.hdf5
+*.npz
+
+# ---------------------------------------------------------------------------
+# Model artifacts — tracked by manifest + registry, not by bytes.
+# ---------------------------------------------------------------------------
+models/**
+!models/README.md
+!models/registry.json
+!models/.gitkeep
+*.pt
+*.pth
+*.onnx
+*.pkl
+*.joblib
+*.bin
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.hypothesis/
+
+# ---------------------------------------------------------------------------
+# Node / frontend
+# ---------------------------------------------------------------------------
+node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/coverage/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tsbuildinfo
+
+# ---------------------------------------------------------------------------
+# Runtime output — logs, run manifests, simulation results
+# ---------------------------------------------------------------------------
+logs/
+*.log
+runs/
+outputs/
+tmp/
+
+# ---------------------------------------------------------------------------
+# Editors / OS
+# ---------------------------------------------------------------------------
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# TypeScript composite project declaration output
+frontend/.tsbuild/

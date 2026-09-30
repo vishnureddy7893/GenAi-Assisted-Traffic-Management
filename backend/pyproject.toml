@@ -1,0 +1,99 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gtms-backend"
+version = "0.1.0"
+description = "GenAI-Assisted Traffic Management System — decision-support backend (advisory only; controls no real infrastructure)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "GenAI-Traffic-Management capstone" }]
+
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pydantic>=2.9",
+    "pydantic-settings>=2.4",
+    "python-multipart>=0.0.9",   # multipart/form-data uploads
+    "pillow>=10.0",              # image decoding and metadata
+    # Container/codec reader for recorded video: open, read, seek, query.
+    # Used purely as a decoder — no vision algorithm is invoked anywhere.
+    # The headless build avoids GUI dependencies unnecessary on a server.
+    "opencv-python-headless>=4.10",
+    "numpy>=1.26",               # frame payload representation
+]
+
+[project.optional-dependencies]
+# Perception backends (phase 3). Optional so a deployment that only ingests
+# tabular data is not forced to install PyTorch. The application probes for
+# these at runtime and reports detection as unavailable when absent, rather
+# than failing to start.
+vision = [
+    "ultralytics>=8.3",            # pretrained YOLO; fetches its own weights
+]
+vision-onnx = [
+    "onnxruntime>=1.18",           # lighter alternative backend
+]
+dev = [
+    "pytest>=8.2",
+    "pytest-cov>=5.0",
+    "httpx>=0.27",          # required by fastapi.testclient
+    "ruff>=0.6",
+    "mypy>=1.11",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+
+# ---------------------------------------------------------------------------
+# Tests
+# ---------------------------------------------------------------------------
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra --strict-markers --strict-config"
+filterwarnings = [
+    "error",                                        # warnings are failures...
+    "ignore::DeprecationWarning:app.domain.compat", # ...except our own intentional one
+    # ...and a third-party notice we do not control: starlette's TestClient warns
+    # about httpx v1 at import time. Matched by message so a different starlette
+    # deprecation still fails the suite.
+    "ignore:Using `httpx` with `starlette.testclient` is deprecated:",
+]
+markers = [
+    "contract: interface/ABC contract tests (Phase 1 surface)",
+    "safety: safety-critical invariants — must never be skipped",
+]
+
+# ---------------------------------------------------------------------------
+# Lint / format
+# ---------------------------------------------------------------------------
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4", "SIM", "RUF", "ANN", "S"]
+ignore = [
+    "ANN401",  # allow typing.Any where genuinely needed
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "ANN"]   # asserts and loose annotations are fine in tests
+
+# ---------------------------------------------------------------------------
+# Type checking
+# ---------------------------------------------------------------------------
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_unreachable = true
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false

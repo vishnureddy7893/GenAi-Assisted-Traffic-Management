@@ -1,0 +1,1000 @@
+{
+  "network_id": "example-grid",
+  "name": "Synthetic four-junction example grid",
+  "version": "1.0.0",
+  "driving_side": "left",
+  "provenance": {
+    "source": "assumed",
+    "producer": "docs.example_network",
+    "producer_version": "1.0",
+    "observed_at": "2026-08-27T00:00:00Z",
+    "computed_at": "2026-08-27T00:00:00Z",
+    "confidence": null,
+    "input_refs": [],
+    "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+  },
+  "junctions": [
+    {
+      "junction_id": "J1",
+      "name": "North West junction",
+      "kind": "signalized",
+      "position": {
+        "latitude": 16.505,
+        "longitude": 80.6
+      },
+      "approaches": [
+        {
+          "approach_id": "J1-A-SEG-21",
+          "incoming_segment_id": "SEG-21",
+          "lanes": [
+            {
+              "index": 0,
+              "permitted_movements": [
+                "left",
+                "through"
+              ],
+              "is_exclusive_turn_lane": false
+            },
+            {
+              "index": 1,
+              "permitted_movements": [
+                "right"
+              ],
+              "is_exclusive_turn_lane": false
+            }
+          ],
+          "bearing_degrees": null,
+          "has_pedestrian_crossing": true,
+          "crossing_is_signalized": true
+        },
+        {
+          "approach_id": "J1-A-SEG-41",
+          "incoming_segment_id": "SEG-41",
+          "lanes": [
+            {
+              "index": 0,
+              "permitted_movements": [
+                "left",
+                "through"
+              ],
+              "is_exclusive_turn_lane": false
+            },
+            {
+              "index": 1,
+              "permitted_movements": [
+                "right"
+              ],
+              "is_exclusive_turn_lane": false
+            }
+          ],
+          "bearing_degrees": null,
+          "has_pedestrian_crossing": true,
+          "crossing_is_signalized": true
+        }
+      ],
+      "movements": [
+        {
+          "movement_id": "MV-SEG-21-SEG-12",
+          "junction_id": "J1",
+          "from_segment_id": "SEG-21",
+          "to_segment_id": "SEG-12",
+          "movement_type": "u_turn",
+          "is_permitted": false,
+          "signal_group_id": null,
+          "conflicting_movement_ids": []
+        },
+        {
+          "movement_id": "MV-SEG-21-SEG-14",
+          "junction_id": "J1",
+          "from_segment_id": "SEG-21",
+          "to_segment_id": "SEG-14",
+          "movement_type": "through",
+          "is_permitted": true,
+          "signal_group_id": "SG-J1-1",
+          "conflicting_movement_ids": []
+        },
+        {
+          "movement_id": "MV-SEG-41-SEG-12",
+          "junction_id": "J1",
+          "from_segment_id": "SEG-41",
+          "to_segment_id": "SEG-12",
+          "movement_type": "through",
+          "is_permitted": true,
+          "signal_group_id": "SG-J1-1",
+          "conflicting_movement_ids": []
+        },
+        {
+          "movement_id": "MV-SEG-41-SEG-14",
+          "junction_id": "J1",
+          "from_segment_id": "SEG-41",
+          "to_segment_id": "SEG-14",
+          "movement_type": "u_turn",
+          "is_permitted": false,
+          "signal_group_id": null,
+          "conflicting_movement_ids": []
+        }
+      ]
+    },
+    {
+      "junction_id": "J2",
+      "name": "North East junction",
+      "kind": "signalized",
+      "position": {
+        "latitude": 16.505,
+        "longitude": 80.605
+      },
+      "approaches": [
+        {
+          "approach_id": "J2-A-SEG-12",
+          "incoming_segment_id": "SEG-12",
+          "lanes": [
+            {
+              "index": 0,
+              "permitted_movements": [
+                "left",
+                "through"
+              ],
+              "is_exclusive_turn_lane": false
+            },
+            {
+              "index": 1,
+              "permitted_movements": [
+                "right"
+              ],
+              "is_exclusive_turn_lane": false
+            }
+          ],
+          "bearing_degrees": null,
+          "has_pedestrian_crossing": true,
+          "crossing_is_signalized": true
+        },
+        {
+          "approach_id": "J2-A-SEG-32",
+          "incoming_segment_id": "SEG-32",
+          "lanes": [
+            {
+              "index": 0,
+              "permitted_movements": [
+                "left",
+                "through"
+              ],
+              "is_exclusive_turn_lane": false
+            },
+            {
+              "index": 1,
+              "permitted_movements": [
+                "right"
+              ],
+              "is_exclusive_turn_lane": false
+            }
+          ],
+          "bearing_degrees": null,
+          "has_pedestrian_crossing": true,
+          "crossing_is_signalized": true
+        }
+      ],
+      "movements": [
+        {
+          "movement_id": "MV-SEG-12-SEG-21",
+          "junction_id": "J2",
+          "from_segment_id": "SEG-12",
+          "to_segment_id": "SEG-21",
+          "movement_type": "u_turn",
+          "is_permitted": false,
+          "signal_group_id": null,
+          "conflicting_movement_ids": []
+        },
+        {
+          "movement_id": "MV-SEG-12-SEG-23",
+          "junction_id": "J2",
+          "from_segment_id": "SEG-12",
+          "to_segment_id": "SEG-23",
+          "movement_type": "through",
+          "is_permitted": true,
+          "signal_group_id": "SG-J2-1",
+          "conflicting_movement_ids": []
+        },
+        {
+          "movement_id": "MV-SEG-32-SEG-21",
+          "junction_id": "J2",
+          "from_segment_id": "SEG-32",
+          "to_segment_id": "SEG-21",
+          "movement_type": "through",
+          "is_permitted": true,
+          "signal_group_id": "SG-J2-1",
+          "conflicting_movement_ids": []
+        },
+        {
+          "movement_id": "MV-SEG-32-SEG-23",
+          "junction_id": "J2",
+          "from_segment_id": "SEG-32",
+          "to_segment_id": "SEG-23",
+          "movement_type": "u_turn",
+          "is_permitted": false,
+          "signal_group_id": null,
+          "conflicting_movement_ids": []
+        }
+      ]
+    },
+    {
+      "junction_id": "J3",
+      "name": "South East junction",
+      "kind": "signalized",
+      "position": {
+        "latitude": 16.5,
+        "longitude": 80.605
+      },
+      "approaches": [
+        {
+          "approach_id": "J3-A-SEG-23",
+          "incoming_segment_id": "SEG-23",
+          "lanes": [
+            {
+              "index": 0,
+              "permitted_movements": [
+                "left",
+                "through"
+              ],
+              "is_exclusive_turn_lane": false
+            },
+            {
+              "index": 1,
+              "permitted_movements": [
+                "right"
+              ],
+              "is_exclusive_turn_lane": false
+            }
+          ],
+          "bearing_degrees": null,
+          "has_pedestrian_crossing": true,
+          "crossing_is_signalized": true
+        },
+        {
+          "approach_id": "J3-A-SEG-43",
+          "incoming_segment_id": "SEG-43",
+          "lanes": [
+            {
+              "index": 0,
+              "permitted_movements": [
+                "left",
+                "through"
+              ],
+              "is_exclusive_turn_lane": false
+            },
+            {
+              "index": 1,
+              "permitted_movements": [
+                "right"
+              ],
+              "is_exclusive_turn_lane": false
+            }
+          ],
+          "bearing_degrees": null,
+          "has_pedestrian_crossing": true,
+          "crossing_is_signalized": true
+        }
+      ],
+      "movements": [
+        {
+          "movement_id": "MV-SEG-23-SEG-32",
+          "junction_id": "J3",
+          "from_segment_id": "SEG-23",
+          "to_segment_id": "SEG-32",
+          "movement_type": "u_turn",
+          "is_permitted": false,
+          "signal_group_id": null,
+          "conflicting_movement_ids": []
+        },
+        {
+          "movement_id": "MV-SEG-23-SEG-34",
+          "junction_id": "J3",
+          "from_segment_id": "SEG-23",
+          "to_segment_id": "SEG-34",
+          "movement_type": "through",
+          "is_permitted": true,
+          "signal_group_id": "SG-J3-1",
+          "conflicting_movement_ids": []
+        },
+        {
+          "movement_id": "MV-SEG-43-SEG-32",
+          "junction_id": "J3",
+          "from_segment_id": "SEG-43",
+          "to_segment_id": "SEG-32",
+          "movement_type": "through",
+          "is_permitted": true,
+          "signal_group_id": "SG-J3-1",
+          "conflicting_movement_ids": []
+        },
+        {
+          "movement_id": "MV-SEG-43-SEG-34",
+          "junction_id": "J3",
+          "from_segment_id": "SEG-43",
+          "to_segment_id": "SEG-34",
+          "movement_type": "u_turn",
+          "is_permitted": false,
+          "signal_group_id": null,
+          "conflicting_movement_ids": []
+        }
+      ]
+    },
+    {
+      "junction_id": "J4",
+      "name": "South West junction",
+      "kind": "signalized",
+      "position": {
+        "latitude": 16.5,
+        "longitude": 80.6
+      },
+      "approaches": [
+        {
+          "approach_id": "J4-A-SEG-34",
+          "incoming_segment_id": "SEG-34",
+          "lanes": [
+            {
+              "index": 0,
+              "permitted_movements": [
+                "left",
+                "through"
+              ],
+              "is_exclusive_turn_lane": false
+            },
+            {
+              "index": 1,
+              "permitted_movements": [
+                "right"
+              ],
+              "is_exclusive_turn_lane": false
+            }
+          ],
+          "bearing_degrees": null,
+          "has_pedestrian_crossing": true,
+          "crossing_is_signalized": true
+        },
+        {
+          "approach_id": "J4-A-SEG-14",
+          "incoming_segment_id": "SEG-14",
+          "lanes": [
+            {
+              "index": 0,
+              "permitted_movements": [
+                "left",
+                "through"
+              ],
+              "is_exclusive_turn_lane": false
+            },
+            {
+              "index": 1,
+              "permitted_movements": [
+                "right"
+              ],
+              "is_exclusive_turn_lane": false
+            }
+          ],
+          "bearing_degrees": null,
+          "has_pedestrian_crossing": true,
+          "crossing_is_signalized": true
+        }
+      ],
+      "movements": [
+        {
+          "movement_id": "MV-SEG-34-SEG-43",
+          "junction_id": "J4",
+          "from_segment_id": "SEG-34",
+          "to_segment_id": "SEG-43",
+          "movement_type": "u_turn",
+          "is_permitted": false,
+          "signal_group_id": null,
+          "conflicting_movement_ids": []
+        },
+        {
+          "movement_id": "MV-SEG-34-SEG-41",
+          "junction_id": "J4",
+          "from_segment_id": "SEG-34",
+          "to_segment_id": "SEG-41",
+          "movement_type": "through",
+          "is_permitted": true,
+          "signal_group_id": "SG-J4-1",
+          "conflicting_movement_ids": []
+        },
+        {
+          "movement_id": "MV-SEG-14-SEG-43",
+          "junction_id": "J4",
+          "from_segment_id": "SEG-14",
+          "to_segment_id": "SEG-43",
+          "movement_type": "through",
+          "is_permitted": true,
+          "signal_group_id": "SG-J4-1",
+          "conflicting_movement_ids": []
+        },
+        {
+          "movement_id": "MV-SEG-14-SEG-41",
+          "junction_id": "J4",
+          "from_segment_id": "SEG-14",
+          "to_segment_id": "SEG-41",
+          "movement_type": "u_turn",
+          "is_permitted": false,
+          "signal_group_id": null,
+          "conflicting_movement_ids": []
+        }
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "SEG-12",
+      "from_junction_id": "J1",
+      "to_junction_id": "J2",
+      "name": "North West to North East",
+      "road_class": "arterial",
+      "length_m": {
+        "value": 556.0,
+        "unit": "m",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "lane_count": 2,
+      "free_flow_speed_kph": {
+        "value": 45.0,
+        "unit": "km/h",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "speed_limit_kph": {
+        "value": 50.0,
+        "unit": "km/h",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "capacity_veh_per_hour": null,
+      "physical_restrictions": {
+        "max_height_m": null,
+        "max_weight_t": null,
+        "max_width_m": null,
+        "excluded_vehicle_types": [],
+        "notes": null
+      },
+      "geometry": [
+        {
+          "latitude": 16.505,
+          "longitude": 80.6
+        },
+        {
+          "latitude": 16.505,
+          "longitude": 80.605
+        }
+      ]
+    },
+    {
+      "segment_id": "SEG-21",
+      "from_junction_id": "J2",
+      "to_junction_id": "J1",
+      "name": "North East to North West",
+      "road_class": "arterial",
+      "length_m": {
+        "value": 556.0,
+        "unit": "m",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "lane_count": 2,
+      "free_flow_speed_kph": {
+        "value": 45.0,
+        "unit": "km/h",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "speed_limit_kph": {
+        "value": 50.0,
+        "unit": "km/h",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "capacity_veh_per_hour": null,
+      "physical_restrictions": {
+        "max_height_m": null,
+        "max_weight_t": null,
+        "max_width_m": null,
+        "excluded_vehicle_types": [],
+        "notes": null
+      },
+      "geometry": [
+        {
+          "latitude": 16.505,
+          "longitude": 80.605
+        },
+        {
+          "latitude": 16.505,
+          "longitude": 80.6
+        }
+      ]
+    },
+    {
+      "segment_id": "SEG-23",
+      "from_junction_id": "J2",
+      "to_junction_id": "J3",
+      "name": "North East to South East",
+      "road_class": "arterial",
+      "length_m": {
+        "value": 556.0,
+        "unit": "m",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "lane_count": 2,
+      "free_flow_speed_kph": {
+        "value": 45.0,
+        "unit": "km/h",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "speed_limit_kph": {
+        "value": 50.0,
+        "unit": "km/h",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "capacity_veh_per_hour": null,
+      "physical_restrictions": {
+        "max_height_m": null,
+        "max_weight_t": null,
+        "max_width_m": null,
+        "excluded_vehicle_types": [],
+        "notes": null
+      },
+      "geometry": [
+        {
+          "latitude": 16.505,
+          "longitude": 80.605
+        },
+        {
+          "latitude": 16.5,
+          "longitude": 80.605
+        }
+      ]
+    },
+    {
+      "segment_id": "SEG-32",
+      "from_junction_id": "J3",
+      "to_junction_id": "J2",
+      "name": "South East to North East",
+      "road_class": "arterial",
+      "length_m": {
+        "value": 556.0,
+        "unit": "m",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "lane_count": 2,
+      "free_flow_speed_kph": {
+        "value": 45.0,
+        "unit": "km/h",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "speed_limit_kph": {
+        "value": 50.0,
+        "unit": "km/h",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "capacity_veh_per_hour": null,
+      "physical_restrictions": {
+        "max_height_m": null,
+        "max_weight_t": null,
+        "max_width_m": null,
+        "excluded_vehicle_types": [],
+        "notes": null
+      },
+      "geometry": [
+        {
+          "latitude": 16.5,
+          "longitude": 80.605
+        },
+        {
+          "latitude": 16.505,
+          "longitude": 80.605
+        }
+      ]
+    },
+    {
+      "segment_id": "SEG-34",
+      "from_junction_id": "J3",
+      "to_junction_id": "J4",
+      "name": "South East to South West",
+      "road_class": "arterial",
+      "length_m": {
+        "value": 533.0,
+        "unit": "m",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "lane_count": 2,
+      "free_flow_speed_kph": {
+        "value": 45.0,
+        "unit": "km/h",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "speed_limit_kph": {
+        "value": 50.0,
+        "unit": "km/h",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "capacity_veh_per_hour": null,
+      "physical_restrictions": {
+        "max_height_m": null,
+        "max_weight_t": null,
+        "max_width_m": null,
+        "excluded_vehicle_types": [],
+        "notes": null
+      },
+      "geometry": [
+        {
+          "latitude": 16.5,
+          "longitude": 80.605
+        },
+        {
+          "latitude": 16.5,
+          "longitude": 80.6
+        }
+      ]
+    },
+    {
+      "segment_id": "SEG-43",
+      "from_junction_id": "J4",
+      "to_junction_id": "J3",
+      "name": "South West to South East",
+      "road_class": "arterial",
+      "length_m": {
+        "value": 533.0,
+        "unit": "m",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "lane_count": 2,
+      "free_flow_speed_kph": {
+        "value": 45.0,
+        "unit": "km/h",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "speed_limit_kph": {
+        "value": 50.0,
+        "unit": "km/h",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "capacity_veh_per_hour": null,
+      "physical_restrictions": {
+        "max_height_m": null,
+        "max_weight_t": null,
+        "max_width_m": null,
+        "excluded_vehicle_types": [],
+        "notes": null
+      },
+      "geometry": [
+        {
+          "latitude": 16.5,
+          "longitude": 80.6
+        },
+        {
+          "latitude": 16.5,
+          "longitude": 80.605
+        }
+      ]
+    },
+    {
+      "segment_id": "SEG-41",
+      "from_junction_id": "J4",
+      "to_junction_id": "J1",
+      "name": "South West to North West",
+      "road_class": "arterial",
+      "length_m": {
+        "value": 556.0,
+        "unit": "m",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "lane_count": 2,
+      "free_flow_speed_kph": {
+        "value": 45.0,
+        "unit": "km/h",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "speed_limit_kph": {
+        "value": 50.0,
+        "unit": "km/h",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "capacity_veh_per_hour": null,
+      "physical_restrictions": {
+        "max_height_m": null,
+        "max_weight_t": null,
+        "max_width_m": null,
+        "excluded_vehicle_types": [],
+        "notes": null
+      },
+      "geometry": [
+        {
+          "latitude": 16.5,
+          "longitude": 80.6
+        },
+        {
+          "latitude": 16.505,
+          "longitude": 80.6
+        }
+      ]
+    },
+    {
+      "segment_id": "SEG-14",
+      "from_junction_id": "J1",
+      "to_junction_id": "J4",
+      "name": "North West to South West",
+      "road_class": "arterial",
+      "length_m": {
+        "value": 556.0,
+        "unit": "m",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "lane_count": 2,
+      "free_flow_speed_kph": {
+        "value": 45.0,
+        "unit": "km/h",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "speed_limit_kph": {
+        "value": 50.0,
+        "unit": "km/h",
+        "provenance": {
+          "source": "assumed",
+          "producer": "docs.example_network",
+          "producer_version": "1.0",
+          "observed_at": "2026-08-27T00:00:00Z",
+          "computed_at": "2026-08-27T00:00:00Z",
+          "confidence": null,
+          "input_refs": [],
+          "notes": "Synthetic four-junction grid, hand-authored for testing and demonstration. Not a survey of any real road network: every coordinate, length and lane count is invented, and no route planned over it describes real geography."
+        }
+      },
+      "capacity_veh_per_hour": null,
+      "physical_restrictions": {
+        "max_height_m": null,
+        "max_weight_t": null,
+        "max_width_m": null,
+        "excluded_vehicle_types": [],
+        "notes": null
+      },
+      "geometry": [
+        {
+          "latitude": 16.505,
+          "longitude": 80.6
+        },
+        {
+          "latitude": 16.5,
+          "longitude": 80.6
+        }
+      ]
+    }
+  ],
+  "facilities": [
+    {
+      "facility_id": "FAC-HOSP-1",
+      "name": "Example General Hospital",
+      "facility_type": "hospital",
+      "access_junction_id": "J3",
+      "position": {
+        "latitude": 16.5001,
+        "longitude": 80.6051
+      },
+      "accepts_emergency_types": [
+        "rescue",
+        "ambulance"
+      ],
+      "notes": "Synthetic facility. Not a real hospital."
+    },
+    {
+      "facility_id": "FAC-FIRE-1",
+      "name": "Example Fire Station",
+      "facility_type": "fire_station",
+      "access_junction_id": "J1",
+      "position": {
+        "latitude": 16.5051,
+        "longitude": 80.6001
+      },
+      "accepts_emergency_types": [
+        "fire_engine",
+        "rescue"
+      ],
+      "notes": "Synthetic facility. Not a real fire station."
+    }
+  ]
+}

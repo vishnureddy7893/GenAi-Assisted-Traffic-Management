@@ -1,0 +1,32 @@
+{
+  "mapping_id": "example-grid-mapping",
+  "version": "1.0.0",
+  "network_id": "example-grid",
+  "network_version": "1.0.0",
+  "provenance": {
+    "source": "assumed",
+    "producer": "docs.example_mapping",
+    "producer_version": "1.0",
+    "observed_at": "2026-08-27T00:00:00Z",
+    "computed_at": "2026-08-27T00:00:00Z",
+    "confidence": null,
+    "input_refs": [],
+    "notes": "SYNTHETIC. Hand-authored to demonstrate the binding format against the synthetic example-grid network. No camera was surveyed against any road: the observation_area_id values below are placeholders and match no real analysed media. A real binding uses the observation_area_id that Phase 5 actually reports, which for ingested media is 'observation-area:<media_id>'."
+  },
+  "bindings": [
+    {
+      "observation_area_id": "observation-area:PLACEHOLDER-north-approach",
+      "segment_id": "SEG-12",
+      "junction_id": null,
+      "approach_id": null,
+      "coverage_note": "Placeholder. Would describe a camera facing north-east along the J1 to J2 arm, covering the approach stop line."
+    },
+    {
+      "observation_area_id": "observation-area:PLACEHOLDER-east-approach",
+      "segment_id": "SEG-23",
+      "junction_id": "J2",
+      "approach_id": null,
+      "coverage_note": "Placeholder. Would describe a camera on the J2 mast looking south down the J2 to J3 arm."
+    }
+  ]
+}
