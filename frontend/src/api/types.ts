@@ -1991,3 +1991,20 @@ export interface EmergencyResponseBody {
   warrants_corridor_preemption: boolean;
   elapsed_response_time_s: number | null;
 }
+export interface RecommendationRequest {
+  junction: string;
+  vehicle_count: number;
+  average_speed_kmh?: number | null;
+  congestion_level: string;
+  incident?: string;
+}
+
+export interface RecommendationResponse {
+  success: boolean;
+  summary: string;
+  recommendations: string[];
+  source: string;
+  junction: string;
+  congestion_level: string;
+  limitations: string[];
+}

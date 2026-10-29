@@ -321,6 +321,7 @@ export const endpoints = {
   // computed. Never a second source of traffic figures.
   advisorStatus: "/api/advisor/status",
   advisorAnalyze: "/api/advisor/analyze",
+  advisorRecommendation: "/api/advisor/recommendation",
   media: (id: string): string => `/api/media/${encodeURIComponent(id)}`,
   playback: (id: string): string =>
     `/api/media/videos/${encodeURIComponent(id)}/playback`,

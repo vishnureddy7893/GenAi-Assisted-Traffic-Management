@@ -44,6 +44,7 @@ import { SimulationPanel } from "./components/SimulationPanel";
 import { SystemStatusPanel } from "./components/SystemStatusPanel";
 import { TrafficInputPanel } from "./components/TrafficInputPanel";
 import { VersionsPanel } from "./components/VersionsPanel";
+import { TrafficMapPanel } from "./components/TrafficMapPanel";
 import { WorkflowStage } from "./components/WorkflowStage";
 import { endpoints } from "./api/client";
 import { useApiResource } from "./hooks/useApiResource";
@@ -108,6 +109,14 @@ export function App(): JSX.Element {
 
         <WorkflowStage
           step={2}
+          title="Junction map — simulated traffic overview"
+          summary="Interactive OpenStreetMap showing simulated junction congestion. Click a marker to see vehicle count and an AI-generated recommendation. Data is illustrative only."
+        >
+          <TrafficMapPanel />
+        </WorkflowStage>
+
+        <WorkflowStage
+          step={3}
           title="Road network"
           summary="Load the surveyed graph that every incident, dispatch and route is expressed over."
         >
@@ -127,7 +136,7 @@ export function App(): JSX.Element {
         </WorkflowStage>
 
         <WorkflowStage
-          step={3}
+          step={4}
           title="Incidents and emergency response"
           summary="Declare what is disrupting the network, and the response that has to travel through it."
         >
@@ -150,7 +159,7 @@ export function App(): JSX.Element {
         </WorkflowStage>
 
         <WorkflowStage
-          step={4}
+          step={5}
           title="Route optimization"
           summary="Rank admissible routes by risk-adjusted arrival time, and say why the winner won."
         >
@@ -162,7 +171,7 @@ export function App(): JSX.Element {
         </WorkflowStage>
 
         <WorkflowStage
-          step={5}
+          step={6}
           title="Traffic simulation"
           summary="Run the recommended route and the baseline through the same modelled conditions, and report the difference."
         >
@@ -170,7 +179,7 @@ export function App(): JSX.Element {
         </WorkflowStage>
 
         <WorkflowStage
-          step={6}
+          step={7}
           title="AI Traffic Advisor"
           summary="Explain the computed facts in operator language and suggest actions. The advisory cites the facts it used and names what it could not see."
         >
@@ -178,14 +187,14 @@ export function App(): JSX.Element {
         </WorkflowStage>
 
         <WorkflowStage
-          step={7}
+          step={8}
           title="Decision record and explanation"
           summary="Human approval of a recommendation, and a generated narrative over a fact table."
           future
           futureNote={
             "Not implemented. The decision engine and human approval are phase 9, " +
             "and generated explanation is phase 12. Simulation results appear in " +
-            "stage 5 above, labelled as modelled outcomes; no panel here shows a " +
+            "stage 6 above, labelled as modelled outcomes; no panel here shows a " +
             "placeholder narrative or an approval control, because a recommendation " +
             "that can be accepted before the step built to check it is exactly what " +
             "this ordering exists to prevent."
